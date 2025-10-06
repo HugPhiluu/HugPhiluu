@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @HugPhiluu
+- 👋 Hi, I’m Philuu
 - 👀 I’m interested in Videogames
 - 🌱 I’m currently learning C#
 - 💞️ I’m looking to collaborate on modding
