@@ -1,2 +1,43 @@
-- name: Metrics embed
-  uses: lowlighter/metrics@v3.34
+name: Metrics
+on:
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # (optional) Run workflow manually
+  workflow_dispatch:
+  # (optional) Run workflow when pushing on master/main
+  push: {branches: ["master", "main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          user: HugPhiluu
+          template: classic
+          base: header, activity, repositories
+          config_timezone: Europe/Berlin
+          # Recent Languages
+          plugin_languages: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_categories: markup, programming
+          plugin_languages_colors: github
+          plugin_languages_limit: 8
+          plugin_languages_sections: recently-used
+          plugin_languages_threshold: 0%
+          plugin_languages_ignored: c#, shaderlab, hlsl, glsl
+          plugin_languages_indepth: true
+          commits_authoring: HugPhiluu, Philuu, github@philuu.net
+
+          # Wakatime
+          plugin_wakatime: yes
+          plugin_wakatime_sections: time, projects, languages, languages-graphs, editors, os
+          plugin_wakatime_token: ${{ secrets.WAKA_KEY }}
+          plugin_wakatime_user: PhiBee
+
+          
