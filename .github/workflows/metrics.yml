@@ -32,12 +32,4 @@ jobs:
           plugin_languages_threshold: 0%
           plugin_languages_ignored: c#, shaderlab, hlsl, glsl
           plugin_languages_indepth: true
-          commits_authoring: HugPhiluu, Philuu, github@philuu.net
-
-          # Wakatime
-          plugin_wakatime: yes
-          plugin_wakatime_sections: time, projects, languages, languages-graphs, editors, os
-          plugin_wakatime_token: ${{ secrets.WAKA_KEY }}
-          plugin_wakatime_user: PhiBee
-
-          
+          commits_authoring: HugPhiluu, Philuu, github@philuu.net        
