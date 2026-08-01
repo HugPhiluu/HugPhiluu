@@ -19,7 +19,7 @@ I write code.
 ### What I’m After
 
 * Collaborations 
-* Projects that are fun and engaging. 
+* Projects that are fun. 
 
 ---
 
