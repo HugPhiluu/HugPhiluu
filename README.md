@@ -1,8 +1,7 @@
 <h1 align="center">👋 Hey, I’m <strong>Philuu</strong></h1>
 
 <p align="center">
-I build systems.<br>
-I write code.
+I write code sometimes.
 </p>
 
 ---
